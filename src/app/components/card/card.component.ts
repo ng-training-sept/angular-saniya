@@ -43,7 +43,7 @@ export class CardComponent {
 
 @Output() titleEvent$ =new EventEmitter<string>();
 
-@Output() deleteEvent$ =new EventEmitter<void>();
+@Output() deleteEvent$ =new EventEmitter<string>();
 
 onAddCard(title: string): void{
   this.titleEvent$.emit(title);

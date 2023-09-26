@@ -1,5 +1,5 @@
  
-<app-card  *ngFor="let title of cardsTitle" [titles]="cardsTitle" (titleEvent$)="addCard($event)"  (deleteEvent$)="deleteCard(title)"></app-card>
+<app-card  [titles]="cardsTitle" (titleEvent$)="addCard($event)"  (deleteEvent$)="deleteCard($event)"></app-card>
 
 <app-new-card></app-new-card>
 <app-directives-c></app-directives-c>

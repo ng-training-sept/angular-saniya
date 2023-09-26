@@ -19,7 +19,7 @@ import { DirectivesCComponent } from './directives-c/directives-c.component';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng';
+
 
 cardsTitle: string[] = ['Maia', 'Dylan', 'Minoru', 'Amarachi', 'Ceallagh'];
 
