@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Table</title>
+</head>
+  <body>
+    <table class="tb">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Address</th>
+                <th>Age</th>
+                </tr>
+                </thead>
+                <tbody class="tb">  
+                    <tr *ngFor="let user of users">
+                 <!-- <ng-container *ngIf=""user.age>20></ng-container> -->
+                    <td *ngIf="user.age > 20">{{ user.username }}</td>
+                    <td *ngIf="user.age > 20">{{ user.address }}</td>
+                    <td *ngIf="user.age > 20">{{ user.age }}</td> 
+                    </tr>
+                </tbody>
+             </table>
+    
+            </body>
+</html>
