@@ -6,24 +6,32 @@ import { SportsComponent } from './forms/sports/sports.component';
 import { GroceriesComponent } from './forms/groceries/groceries.component';
 import { CardDesComponent } from './components/card/card-des/card-des.component';
 
+import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.component';
+
 export const routes: Routes = [
-  { path: '', redirectTo: '/sports', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'sports', component : SportsComponent},
    { path: 'sports', loadComponent: () => import('./forms/sports/sports.component').then(m => m.SportsComponent) },
   {
     path : 'sports/card-des/:id', component: CardDesComponent
   },
 
-  { path: '', redirectTo: '/groceries', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'groceries', component : GroceriesComponent},
-   { path: 'groceries', loadComponent: () => import('./forms/groceries/groceries.component').then(m => m.GroceriesComponent) },
+  { path: 'groceries', loadComponent: () => import('./forms/groceries/groceries.component').then(m => m.GroceriesComponent) },
   {
     path : 'groceries/card-des/:id', component: CardDesComponent
   },
 
-  {path: '', redirectTo: '/sports', pathMatch: 'full'},
-  {path: 'sports', loadChildren: () => import('./forms/sports/sports.routes').then(m => m.routes)},
-  {path: 'groceries', loadChildren: () => import('./forms/groceries/groceries.routes').then(m => m.routes)}
+  { path: 'home', loadComponent: () => import('./forms/home/home.component').then(m => m.HomeComponent) }
+  ,
+  { path: '**', component: PageNotFoundComponent },
+  
+  
+  // {path: 'sports', loadChildren: () => import('./forms/sports/sports.routes').then(m => m.routes)},
+  // {path: 'groceries', loadChildren: () => import('./forms/groceries/groceries.routes').then(m => m.routes)}
+
+
 
 
 ];

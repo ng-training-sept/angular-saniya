@@ -8,6 +8,8 @@ import { SportsComponent } from './forms/sports/sports.component';
 import { RouterOutlet } from '@angular/router';
 import { CardItemComponent } from './components/card-item/card-item.component';
 import { CardDesComponent } from './components/card/card-des/card-des.component';
+import { HomeComponent } from './forms/home/home.component';
+import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.component';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -21,6 +23,8 @@ import { CardDesComponent } from './components/card/card-des/card-des.component'
   SportsComponent,
   RouterOutlet,
   CardDesComponent,
+  HomeComponent,
+  PageNotFoundComponent
   ],
 
 
