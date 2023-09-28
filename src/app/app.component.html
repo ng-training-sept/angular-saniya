@@ -1,5 +1,8 @@
- 
-<app-card  [titles]="cardsTitle" (titleEvent$)="addCard($event)"  (deleteEvent$)="deleteCard($event)"></app-card>
+<app-header ></app-header> 
+<!-- <app-card  [titles]="cardsTitle" (titleEvent$)="addCard($event)"  (deleteEvent$)="deleteCard($event)"></app-card> -->
 
-<app-new-card></app-new-card>
-<app-directives-c></app-directives-c>
+<!-- <app-card ></app-card> -->
+<router-outlet></router-outlet>
+<!-- <app-new-card></app-new-card> -->
+<!-- <app-directives-c></app-directives-c>  -->
+ 

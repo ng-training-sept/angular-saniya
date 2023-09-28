@@ -8,6 +8,7 @@ import { Input } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
 
 
+
 @Component({
   selector: 'app-card',
   standalone: true,
@@ -37,9 +38,9 @@ export class CardComponent {
   
 
 // 
+
+
 @Input({required:true}) titles: string[] = [];
-
-
 
 @Output() titleEvent$ =new EventEmitter<string>();
 
@@ -49,7 +50,12 @@ onAddCard(title: string): void{
   this.titleEvent$.emit(title);
 }
 
-onDeleteCard(){
-  this.deleteEvent$.emit();
+onDeleteCard(title:string): void{
+  this.deleteEvent$.emit(title);
 }
+
+
+// @Input() cards: Card[] = [];
 }
+
+

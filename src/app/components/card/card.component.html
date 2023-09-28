@@ -42,14 +42,32 @@
 
 <mat-card class="card" *ngFor="let cardTitle of titles">
   <mat-card-header>
-    <mat-card-title>{{cardTitle}}</mat-card-title>
-  </mat-card-header>
+    <mat-card-title>{{cardTitle}}</mat-card-title> 
+
+    <mat-card-title>{{cardTitle | uppercase | reverse }}</mat-card-title>
+
+   </mat-card-header>
 
   <mat-form-field appearance="fill">
     <mat-label>Title</mat-label>
     <input type="text" matInput #inputTitle>
   </mat-form-field>
   <button mat-raised-button color="primary" (click)="onAddCard(inputTitle.value)">Add Card</button>
-  <button mat-raised-button color="warn" (click)="onDeleteCard()">Delete Card</button>
+  <button mat-raised-button color="warn" (click)="onDeleteCard(cardTitle)">Delete Card</button>
 
-</mat-card>
+</mat-card> 
+
+
+
+<!-- Header Component -->
+<!-- <div class="card-container">
+  <mat-card class="card" *ngFor="let card of cards">
+    <mat-card-header>
+      <mat-card-title>{{ card.name }}</mat-card-title>
+      <mat-card-subtitle>{{ card.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="card.imageUrl" alt="card">
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</div> -->
