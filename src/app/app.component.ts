@@ -32,6 +32,7 @@ import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.com
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  
 
 
 cardsTitle: string[] = ['Maia', 'Dylan', 'Minoru', 'Amarachi', 'Ceallagh'];

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Card } from 'src/app/components/card-item/card-item.model';
 import { CardItemComponent } from 'src/app/components/card-item/card-item.component';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-sports',
@@ -11,6 +12,8 @@ import { CardItemComponent } from 'src/app/components/card-item/card-item.compon
   styleUrls: ['./sports.component.scss']
 })
 export class SportsComponent implements OnInit {
+
+  
 
   sportCards: Card[] = [];
 

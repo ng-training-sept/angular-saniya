@@ -7,6 +7,7 @@ import { GroceriesComponent } from './forms/groceries/groceries.component';
 import { CardDesComponent } from './components/card/card-des/card-des.component';
 
 import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.component';
+import { authGuard } from './auth/auth.constants';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -17,7 +18,7 @@ export const routes: Routes = [
   },
 
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: 'groceries', component : GroceriesComponent},
+  { path: 'groceries',canActivate: [authGuard], component : GroceriesComponent},
   { path: 'groceries', loadComponent: () => import('./forms/groceries/groceries.component').then(m => m.GroceriesComponent) },
   {
     path : 'groceries/card-des/:id', component: CardDesComponent
