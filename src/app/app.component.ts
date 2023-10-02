@@ -10,6 +10,8 @@ import { CardItemComponent } from './components/card-item/card-item.component';
 import { CardDesComponent } from './components/card/card-des/card-des.component';
 import { HomeComponent } from './forms/home/home.component';
 import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.component';
+import { ItemSaveUpdateComponent } from './components/item-save-update/item-save-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -24,7 +26,8 @@ import { PageNotFoundComponent } from './forms/page-not-found/page-not-found.com
   RouterOutlet,
   CardDesComponent,
   HomeComponent,
-  PageNotFoundComponent
+  PageNotFoundComponent,
+  ItemSaveUpdateComponent,ReactiveFormsModule
   ],
 
 

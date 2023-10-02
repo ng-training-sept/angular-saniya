@@ -22,8 +22,8 @@ export class HeaderComponent implements OnInit {
     
   }
 
-
-  private readonly authService = inject(AuthService);
+  constructor(private readonly authService: AuthService) {
+  }
 
   login(): void {
     this.authService.authenticate();
